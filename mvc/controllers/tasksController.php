@@ -69,12 +69,18 @@ class tasksController extends http\controller
     }
 
     public static function save() {
-        session_start();
-        $task = new todo();
+        $user = todos::findOne($_REQUEST['id']);
 
-        $task->body = $_POST['body'];
-        $task->ownerid = $_SESSION['userID'];
-        $task->save();
+        
+        $user->owneremail = $_POST['mail'];
+        $user->ownerid = $_POST['oid'];
+        $user->createddate = $_POST['createdate'];
+        $user->duedate = $_POST['duedate'];
+        $user->message = $_POST['message'];
+        $user->isdone = $_POST['isdone'];
+        $user->save();
+        header("Location: index.php?page=tasks&action=all");
+
 
     }
 
