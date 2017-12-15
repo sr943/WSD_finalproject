@@ -109,7 +109,9 @@ public static function insertTask() {
     {
         $record = todos::findOne($_REQUEST['id']);
         $record->delete();
-        print_r($_POST);
+        print_r("Deleted");
+        
+
 
     }
 
