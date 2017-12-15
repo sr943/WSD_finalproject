@@ -18,13 +18,13 @@
 <body background="bgimage.jpg">
 
  
-<h1><center>
+<h1><center> <font color="#800000"><u>
     <?php
 
     //this how to print some data;
     echo $data['site_name'];
 
-    ?> </h1></center>
+    ?></u></font></center> </h1>
 
 <!--<h1><a href="index.php?page=accounts&action=all">Show All Accounts</a></h1> 
 <h1><a href="index.php?page=tasks&action=all">Show All Tasks</a></h1> -->
@@ -39,7 +39,7 @@
         <label><b>Password</b></label>
         <input type="password" placeholder="Enter Password" name="password" required>
 
-        <button type="submit">Login</button>
+        <button style="background-color:lightblue"type="submit">Login</button>
     </div>
 
 
