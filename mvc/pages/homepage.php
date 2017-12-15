@@ -15,9 +15,9 @@
     <![endif]-->
 </head>
 
-<body>
+<body background="bgimage.jpg">
 
-
+ 
 <h1><center>
     <?php
 

@@ -16,9 +16,9 @@
 </head>
 
 <body>
-<h1>All Accounts</h1>
+<h3>All Accounts</h3>
 
-<h1> HI</h1>
+
 
 <?php
 //this is how you print something
