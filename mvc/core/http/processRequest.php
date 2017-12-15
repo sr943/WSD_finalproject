@@ -31,6 +31,7 @@ class processRequest
 
 
         //I use a static for the controller because it doesn't have any properties
+
         $controller_name::$controller_method();
 
     }
@@ -61,6 +62,7 @@ class processRequest
                 break;
             }
         }
+        
         if (is_null($foundRoute)) {
             controller::getTemplate('notfound');
             exit;
