@@ -15,7 +15,8 @@
     <![endif]-->
 </head>
 
-<body>
+<body background="register.jpg">
+
 
 <style>
 label{
@@ -26,7 +27,7 @@ margin-right: 68.0em;
 display: block;
 }
 </style>
-
+<h3><center>Register</center></h3>
 <form action="index.php?page=accounts&action=register" method="post">
     First name: <label><input type="text" name="fname"></label><br><br>
     Last name: <label><input type="text" name="lname"></label><br><br>

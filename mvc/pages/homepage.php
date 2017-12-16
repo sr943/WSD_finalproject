@@ -1,3 +1,7 @@
+<?php 
+include 'hf.html'; 
+?>
+
 <!doctype html>
 
 <html lang="en">
@@ -33,13 +37,16 @@
 
     <div class="container">
         <h2> Login</h2>
+        <div>
         <label><b>Username</b></label>
         <input type="text" placeholder="Enter Username" name="email" required>
 
         <label><b>Password</b></label>
         <input type="password" placeholder="Enter Password" name="password" required>
-
-        <button style="background-color:lightblue"type="submit">Login</button>
+        
+        
+            <button style="background-color:lightblue" type="submit">Login</button>
+        </div>
     </div>
 
 
