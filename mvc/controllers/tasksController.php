@@ -14,9 +14,33 @@ class tasksController extends http\controller
     //to call the show function the url is index.php?page=task&action=show
     public static function show()
     {
-        $record = todos::findOne($_REQUEST['id']);
+        $record = todos::findtodo($_REQUEST['id']);
+
+        //print_r($_REQUEST['id']);
+        //$record = todos::findtodo($_REQUEST['id']);
+        //print_r($record);
+        //print utility\htmlTable::genarateTableFromMultiArray($record);
         self::getTemplate('show_task', $record);
     }
+
+    public static function showTasks()
+    {
+
+/*
+
+        $record = todos::findOne($_REQUEST['id']);
+
+        //print_r($_REQUEST['id']);
+        //$record = todos::findtodo($_REQUEST['id']);
+        print_r($record);
+        //print utility\htmlTable::genarateTableFromMultiArray($record);
+        self::getTemplate('show_task', $record);*/
+        //session_start();
+                $userId=$_SESSION["userID"];
+        $record = todos::findtodo($userId);
+                self::getTemplate('landingpage',$record);
+    }
+    
 
     //to call the show function the url is index.php?page=task&action=list_task
 
@@ -41,13 +65,17 @@ class tasksController extends http\controller
 public static function insertTask() {
         $user = new todo();
 
-        
+        //echo "Hi";
         $user->owneremail = $_POST['mail'];
         $user->ownerid = $_POST['oid'];
         $user->createddate = $_POST['createdate'];
         $user->duedate = $_POST['duedate'];
         $user->message = $_POST['message'];
         $user->isdone = $_POST['isdone'];
+        session_start();
+        //echo 'userID';
+        $user->userid=$_SESSION['userID'];
+        //$user->userid= $_SESSION
         $user->save();
         header("Location: index.php?page=tasks&action=all");
 

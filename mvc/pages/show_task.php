@@ -19,7 +19,7 @@
 
 <?php
 //this is how you print something  $data contains the record that was selected on the table.
-print utility\htmlTable::generateTableFromOneRecord($data);
+print utility\htmlTable::genarateTableFromMultiArray($data);
 ?>
 
 
@@ -33,7 +33,7 @@ display: block;
 }
 </style>
 
-<form action="index.php?page=tasks&action=save&id=<?php echo $data->id; ?>" method="post">
+<!-- <form action="index.php?page=tasks&action=save&id=<?php echo $data->id; ?>" method="post">
 
     
     Ownermail: <label> <input type="email" name="mail" value="<?php echo $data->owneremail; ?>"></label><br><br>
@@ -49,7 +49,7 @@ display: block;
 
 <form action="index.php?page=tasks&action=delete&id=<?php echo $data->id; ?> " method="post" id="form1">
     <button type="submit" form="form1" value="delete">Delete</button>
-</form>
+</form> -->
 
 
 

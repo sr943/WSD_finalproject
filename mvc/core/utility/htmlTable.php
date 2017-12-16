@@ -12,10 +12,11 @@ class htmlTable
         $tableGen .= '<tr>';
         //this grabs the first element of the array so we can extract the field headings for the table
         $fieldHeadings = $array[0];
-        $fieldHeadings = get_object_vars($fieldHeadings);
+        $fieldHeadings = get_object_vars($fieldHeadings); 
         $fieldHeadings = array_keys($fieldHeadings);
         //this gets the page being viewed so that the table routes requests to the correct controller
         $referingPage = $_REQUEST['page'];
+        print($referingPage);
         foreach ($fieldHeadings as $heading) {
             $tableGen .= '<th>' . $heading . '</th>';
         }
