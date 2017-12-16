@@ -60,7 +60,7 @@ class accountsController extends http\controller
             //this creates the password
             //this is a mistake you can fix...
             //Turn the set password function into a static method on a utility class.
-            $user->password = $user->setPassword($_POST['password']);
+            $user->password = account::setPassword($_POST['password']);
             $user->save();
 
             //you may want to send the person to a
@@ -99,6 +99,16 @@ class accountsController extends http\controller
         $user->save();
         header("Location: index.php?page=accounts&action=all");
 
+    }
+
+
+     public static function logout() {        
+
+        session_start();        
+        session_destroy();
+        //echo 'HI';
+        header("Location: index.php?page=homepage&action=show");
+        
     }
 
     public static function delete() {
