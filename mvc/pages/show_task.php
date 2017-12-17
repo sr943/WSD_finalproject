@@ -1,3 +1,8 @@
+<?php 
+include 'hf.html';
+
+?>
+
 <!doctype html>
 
 <html lang="en">
@@ -19,7 +24,8 @@
 
 <?php
 //this is how you print something  $data contains the record that was selected on the table.
-print utility\htmlTable::genarateTableFromMultiArray($data);
+print utility\htmlTable::generateTableFromOneRecord($data);
+//print_r($data);
 ?>
 
 
@@ -33,7 +39,7 @@ display: block;
 }
 </style>
 
-<!-- <form action="index.php?page=tasks&action=save&id=<?php echo $data->id; ?>" method="post">
+<form action="index.php?page=tasks&action=save&id=<?php echo $data->id; ?>" method="post">
 
     
     Ownermail: <label> <input type="email" name="mail" value="<?php echo $data->owneremail; ?>"></label><br><br>
@@ -42,14 +48,14 @@ display: block;
     Duedate: <label><input type="text" name="duedate" value="<?php echo $data->duedate; ?>"></label><br><br>
     Message: <label><input type="text" name="message" value="<?php echo $data->message; ?>"></label><br><br>
     isDone: <label><input type="number" name="isdone" value="<?php echo $data->isdone; ?>"></label><br><br>
-    <input type="submit" value="Submit form">
+    <input type="submit" value="Update Form">
 </form>
 
 
 
 <form action="index.php?page=tasks&action=delete&id=<?php echo $data->id; ?> " method="post" id="form1">
     <button type="submit" form="form1" value="delete">Delete</button>
-</form> -->
+</form> 
 
 
 

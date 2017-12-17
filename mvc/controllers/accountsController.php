@@ -98,8 +98,33 @@ class accountsController extends http\controller
         $user->lname = $_POST['lname'];
         $user->phone = $_POST['phone'];
         $user->birthday = $_POST['birthday'];
-        $user->gender = $_POST['gender'];
+        $user->gender = $_POST['gender'];        
         $user->save();
+        
+       // header("Location: index.php?page=accounts&action=all");
+        header("Location: index.php?page=tasks&action=userTask");
+
+    }
+    
+       public static function myProfile() {
+        if (session_status()== PHP_SESSION_NONE) {
+            session_start();
+        }
+         $record = accounts::findOne($_SESSION['userID']);
+         self::getTemplate('show_account', $record);
+         
+       // header("Location: index.php?page=accounts&action=all");
+        //header("Location: index.php");
+
+    }
+    
+    public static function editProfile() {
+        if (session_status()== PHP_SESSION_NONE) {
+            session_start();
+        }
+         $record = accounts::findOne($_SESSION['userID']);
+         //print_r($record);
+         self::getTemplate('edit_account', $record);
        // header("Location: index.php?page=accounts&action=all");
         //header("Location: index.php");
 

@@ -1,6 +1,7 @@
-<?php 
-include 'hf.html'; 
-?>
+
+
+
+
 
 <!doctype html>
 
@@ -19,7 +20,8 @@ include 'hf.html';
     <![endif]-->
 </head>
 
-<body background="bgimage.jpg">
+
+<body background="alltask.jpg">
 
  
 <h1><center> <font color="#800000"><u>

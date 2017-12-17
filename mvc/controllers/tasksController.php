@@ -14,8 +14,8 @@ class tasksController extends http\controller
     //to call the show function the url is index.php?page=task&action=show
     public static function show()
     {
-        $record = todos::findtodo($_REQUEST['id']);
-
+        $record = todos::findOne($_REQUEST['id']);
+        
         //print_r($_REQUEST['id']);
         //$record = todos::findtodo($_REQUEST['id']);
         //print_r($record);
@@ -72,7 +72,7 @@ public static function insertTask() {
         $user->userid=$_SESSION['userID'];
        
         $user->save();
-        header("Location: index.php?page=tasks&action=all");
+        header("Location: index.php?page=tasks&action=userTask");
 
 
     }   
@@ -133,6 +133,7 @@ public static function insertTask() {
     {
         $record = todos::findOne($_REQUEST['id']);
         $record->delete();
+        header("Location: index.php?page=tasks&action=userTask");
         print_r("Deleted");
         
 

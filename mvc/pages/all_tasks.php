@@ -1,3 +1,8 @@
+<?php 
+include 'hf.html';
+
+?>
+
 <!doctype html>
 
 <html lang="en">
@@ -14,8 +19,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
     <![endif]-->
 </head>
+<body background="alltask.jpg">
 
-<body>
+<a href="index.php?page=accounts&action=myProfile">My Profile</a>
+<br/>
+<a href="index.php?page=accounts&action=editProfile">Edit Profile</a>
 
 <?php
 //this is how you print something

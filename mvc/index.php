@@ -1,3 +1,15 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>boot</title>
+</head>
+<body>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+</body>
+</html>
+
+
 <?php
 
 //turn on debugging messages

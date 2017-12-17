@@ -31,7 +31,8 @@ $routes[] = self::create('GET','register','accounts','accountsController','regis
 $routes[] = self::create('POST','register','accounts','accountsController','store');
 $routes[] = self::create('POST','logout','accounts','accountsController','logout');
 $routes[] = self::create('GET','userTask','tasks','tasksController','userTask');
-
+$routes[] = self::create('GET','myProfile','accounts','accountsController','myProfile');
+$routes[] = self::create('GET','editProfile','accounts','accountsController','editProfile');
 
 return $routes;
 }

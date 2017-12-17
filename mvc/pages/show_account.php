@@ -1,3 +1,7 @@
+<?php 
+include 'hf.html';
+
+?>
 <!doctype html>
 
 <html lang="en">
@@ -17,9 +21,9 @@
 
 <body>
 
-<h1>Email: <?php echo $data->email; ?></h1>
-<h1>First Name: <?php echo $data->fname; ?></h1>
-<h1>Last Name: <?php echo $data->lname; ?></h1>
+<h3>Here are your details</h3>
+<!--<h1>First Name: <?php echo $data->fname; ?></h1>
+<h1>Last Name: <?php echo $data->lname; ?></h1> -->
 
 
 <?php
