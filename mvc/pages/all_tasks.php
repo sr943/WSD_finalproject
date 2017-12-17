@@ -39,7 +39,7 @@ display: block;
 
 <form action="index.php?page=tasks&action=insertTask" method="post">
 
-    <input type="hidden" name="id" value="<?php echo $data->id; ?>">
+    
     Ownermail: <label> <input type="email" name="mail" ></label><br><br>
     Ownerid: <label><input type="number" name="oid" ></label><br><br>
     Createddate: <label> <input type="text" name="createdate" ></label><br><br>

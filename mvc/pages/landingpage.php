@@ -10,6 +10,16 @@
 print utility\htmlTable::genarateTableFromMultiArray($data);
 ?>
 
+<style>
+label{
+width: 5em;
+float: right;
+text-align: left;
+margin-right: 65.0em;
+display: block;
+}
+</style>
+<br>
 <form action="index.php?page=tasks&action=insertTask" method="post">
 
     

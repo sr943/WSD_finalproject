@@ -23,22 +23,17 @@ class tasksController extends http\controller
         self::getTemplate('show_task', $record);
     }
 
-    public static function showTasks()
+    public static function userTask()
     {
+        if (session_status()== PHP_SESSION_NONE) {
+            session_start();
+        }
 
-/*
 
-        $record = todos::findOne($_REQUEST['id']);
-
-        //print_r($_REQUEST['id']);
-        //$record = todos::findtodo($_REQUEST['id']);
-        print_r($record);
-        //print utility\htmlTable::genarateTableFromMultiArray($record);
-        self::getTemplate('show_task', $record);*/
-        //session_start();
-                $userId=$_SESSION["userID"];
-        $record = todos::findtodo($userId);
-                self::getTemplate('landingpage',$record);
+                $_SESSION["userID"];
+                $record = todos::findtodo($_SESSION["userID"]);
+                //print_r($record);
+                self::getTemplate('all_tasks',$record);
     }
     
 
@@ -65,7 +60,7 @@ class tasksController extends http\controller
 public static function insertTask() {
         $user = new todo();
 
-        //echo "Hi";
+        
         $user->owneremail = $_POST['mail'];
         $user->ownerid = $_POST['oid'];
         $user->createddate = $_POST['createdate'];
@@ -73,9 +68,9 @@ public static function insertTask() {
         $user->message = $_POST['message'];
         $user->isdone = $_POST['isdone'];
         session_start();
-        //echo 'userID';
+      
         $user->userid=$_SESSION['userID'];
-        //$user->userid= $_SESSION
+       
         $user->save();
         header("Location: index.php?page=tasks&action=all");
 
@@ -123,6 +118,7 @@ public static function insertTask() {
         $user->duedate = $_POST['duedate'];
         $user->message = $_POST['message'];
         $user->isdone = $_POST['isdone'];
+        $user->userid = $_SESSION['userid'];
         $user->save();
         header("Location: index.php?page=tasks&action=all");
 

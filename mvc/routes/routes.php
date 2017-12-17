@@ -30,6 +30,7 @@ $routes[] = self::create('GET','insertTask','tasks','tasksController','insertTas
 $routes[] = self::create('GET','register','accounts','accountsController','register');
 $routes[] = self::create('POST','register','accounts','accountsController','store');
 $routes[] = self::create('POST','logout','accounts','accountsController','logout');
+$routes[] = self::create('GET','userTask','tasks','tasksController','userTask');
 
 
 return $routes;
