@@ -10,12 +10,19 @@
 <div class="row" style="text-align:right;background-color:grey;font-color:white;">
 <div class="col-md-6"></div>
 <div class="col-md-2"style="  padding-top:  8px;"><a href="index.php?page=accounts&action=myProfile" style="color:white;">My Profile</a></div>
+<div class="col-md-2" style=" padding-top:  8px;"><a href="index.php?page=tasks&action=userTask" style="color:white;">My Tasks</a></div>
 
 <div class="col-md-2"><form action="index.php?page=accounts&action=logout" method="post">
     
     <div class="btn"><input style="border:0px solid transparent;background-color:grey;color:white;cursor:pointer;" type="submit" value ="Logout"> </div>
     </form></div>
-<h3 style = "margin-left: 20px;">Welcome <?php echo $data->fname;?></h3>
+    </div>
+   <h3>Welcome <?php echo $data->fname;?></h3>
+</br>
+<h3 style="text-align: center;">Edit Me</h3>
+
+
+
 
 </div>
 <style>
@@ -60,19 +67,14 @@ display: block;
 
 
     <div class="row">
-		  <div class="col-xs-6 col-sm-3"> <input type="submit" value="Update Form" class="btn btn-primary btn-block btn-md"> 
+		  <div class="col-xs-6 col-sm-2"> <input type="submit" value="Update Form" class="btn btn-primary btn-block btn-md"> 
         <span class ="glyphicon glyphicon-edit"></span> 
       </div>
     </div> 
 </form>
 </br>
-<!--<div class="col-xs-6 col-sm-3">
-  <form action="index.php?page=accounts&action=delete" method="post" id="form1">
-    <input type="submit" form="form1" value="Delete" class="btn btn-primary btn-block btn-md"
-     style ="background-color:red;" />
-  </form>
-</div> -->
-<div class="col-xs-6 col-sm-3">
+
+<div class="col-xs-6 col-sm-2" style ="padding-left: 0px">
 <a href="index.php?page=accounts&action=delete" class="btn btn-primary btn-block btn-md" style ="background-color:red;" >Delete</a>
     </div> 
 </div> 

@@ -166,7 +166,8 @@ class accountsController extends http\controller
 
 
         if ($user == FALSE) {
-            echo 'user not found';
+                $data['message'] = "User not found";
+                self::getTemplate('homepage',$data);
         } else {
 
             if($user->checkPassword($_POST['password']) == TRUE) {
@@ -189,7 +190,8 @@ class accountsController extends http\controller
 
 
             else {
-                echo 'password does not match';
+                $data['message'] = "Password not found";
+                self::getTemplate('homepage',$data);
             }
 
         }

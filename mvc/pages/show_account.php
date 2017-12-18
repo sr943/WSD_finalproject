@@ -30,7 +30,7 @@
 </div>
 <h3>Welcome <?php echo $data->fname;?></h3>
 </br>
-<h3  style="text-align: center;">Here are your details</h3>
+<h3 style="text-align: center;">Here are your details</h3>
 
 </br>
 <div class="container">

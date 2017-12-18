@@ -27,7 +27,7 @@
     </div></div>
 
 <br/>
-
+<h2 style="text-align:center; text-family:arial;"> Update Your Tasks </h2>
 <div class="container">
 <?php
 //this is how you print something  $data contains the record that was selected on the table.
@@ -80,8 +80,8 @@ display: block;
 <div class="col-xs-6 col-sm-3"> 
 
   <form action="index.php?page=tasks&action=delete&id=<?php echo $data->id; ?> " method="post" id="form1">
-    <input type="submit" form="form1" value="delete" class="btn btn-primary btn-block btn-md"
-     style ="background-color:red;">Delete</input>
+    <input type="submit" form="form1" value="Delete" class="btn btn-primary btn-block btn-md"
+     style ="background-color:red;">
 </form>
  </div>
      

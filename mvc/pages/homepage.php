@@ -20,13 +20,7 @@
 <body background="alltask.jpg" style = "background-repeat:no-repeat; background-size:cover;">
 
  <br>
-<h1><center> <font color="Black" ><u>
-    <?php
-
-    //this how to print some data;
-    echo $data['site_name'];
-
-    ?></u></font></center> </h1>
+<h1><center> <font color="Black" ><u>KW Projects</u></font></center> </h1>
 
 
 
@@ -84,6 +78,7 @@
   </div>
   </div>
 
+<center><label><?php echo $data['message'];?></label></center>
 
 <script src="js/scripts.js"></script>
 </body>
