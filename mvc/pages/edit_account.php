@@ -15,7 +15,7 @@
     
     <div class="btn"><input style="border:0px solid transparent;background-color:grey;color:white;cursor:pointer;" type="submit" value ="Logout"> </div>
     </form></div>
-
+<h3 style = "margin-left: 20px;">Welcome <?php echo $data->fname;?></h3>
 
 </div>
 <style>
@@ -31,31 +31,31 @@ display: block;
   <form action="index.php?page=accounts&action=save&id=<?php echo $data->id; ?>" method="POST">
     <div class="form-group">
       <label for="fname">First Name:</label>
-      <input type="text" class="form-control" style ="width:50%" name="fname" value="<?php echo $data->fname; ?>">
+      <input type="text" class="form-control" style ="width:50%" name="fname" value="<?php echo $data->fname; ?>" required>
     </div>  
     <div class="form-group">
       <label for="lname">Last Name:</label>
-      <input type="text" class="form-control" style ="width:50%" name="lname" value="<?php echo $data->lname; ?>">
+      <input type="text" class="form-control" style ="width:50%" name="lname" value="<?php echo $data->lname; ?>" required>
     </div>
   
     <div class="form-group">
       <label for="email">Email:</label>
-      <input type="email" class="form-control" style ="width:50%" name="email" value="<?php echo $data->email; ?>">
+      <input type="email" class="form-control" style ="width:50%" name="email" value="<?php echo $data->email; ?>" required>
     </div>
   
     <div class="form-group">
       <label for="phone">Phone :</label>
-      <input type="number" class="form-control" style ="width:50%" name="phone" value="<?php echo $data->phone; ?>">
+      <input type="number" class="form-control" style ="width:50%" name="phone" value="<?php echo $data->phone; ?>" required>
     </div>
 
     <div class="form-group">
       <label for="Birthday">Birthday:</label>
-      <input type="date" class="form-control" style ="width:50%" name="birthday" value="<?php echo $data->birthday; ?>">
+      <input type="date" class="form-control" style ="width:50%" name="birthday" value="<?php echo $data->birthday; ?>" required>
     </div>
 
     <div class="form-group">
       <label for="gender">Gender:</label>
-      <input type="text" class="form-control" style ="width:50%" name="gender" value="<?php echo $data->gender; ?>">
+      <input type="text" class="form-control" style ="width:50%" name="gender" value="<?php echo $data->gender; ?>" required>
     </div>
 
 

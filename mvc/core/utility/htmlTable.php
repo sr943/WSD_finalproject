@@ -9,7 +9,7 @@ class htmlTable
     {
 
         $tableGen = '<table border="1"cellpadding="10" class ="table table-striped">';
-        $tableGen .= '<thead><tr>';
+        $tableGen .= '<tr>';
         //this grabs the first element of the array so we can extract the field headings for the table
         $fieldHeadings = $array[0];        
         $fieldHeadings = get_object_vars($fieldHeadings); 
@@ -20,7 +20,7 @@ class htmlTable
         foreach ($fieldHeadings as $heading) {
             $tableGen .= '<th>' . $heading . '</th>';
         }
-        $tableGen .= '</tr></thead><tbody>';
+        $tableGen .= '</tr>';
         foreach ($array as $record) {
             $tableGen .= '<tr>';
             foreach ($record as $key => $value) {
@@ -33,7 +33,7 @@ class htmlTable
             $tableGen .= '</tr>';
         }
 
-        $tableGen .= '</tbody></table>';
+        $tableGen .= '</table>';
 
         return $tableGen;
     }

@@ -50,28 +50,28 @@ display: block;
 
    <div class="form-group">
     <label for="email">Ownermail:</label>
-    <input type="email" class="form-control" style ="width:50%" name="mail" value="<?php echo $data->owneremail; ?>">
+    <input type="email" class="form-control" style ="width:50%" name="mail" value="<?php echo $data->owneremail; ?>" required>
   </div>
    <div class="form-group">
     <label for="oid">Ownerid:</label>
-    <input type="text" class="form-control" style ="width:50%" name="oid" value="<?php echo $data->ownerid; ?>">
+    <input type="text" class="form-control" style ="width:50%" name="oid" value="<?php echo $data->ownerid; ?>" required>
   </div>
  <div class="form-group">
     <label for="createdate">CreatedDate:</label>
-    <input type="date" class="form-control" style ="width:50%"name="createdate" value="<?php echo $data->createddate; ?>">
+    <input type="date" class="form-control" style ="width:50%"name="createdate" value="<?php echo $data->createddate; ?>" required>
   </div>
  <div class="form-group">
     <label for="duedate">Due Date:</label>
-    <input type="date" class="form-control" style ="width:50%" name="duedate" value="<?php echo $data->duedate; ?>">
+    <input type="date" class="form-control" style ="width:50%" name="duedate" value="<?php echo $data->duedate; ?>" required>
   </div>
  <div class="form-group">
     <label for="message">Message:</label>
-    <input type="text" class="form-control" style ="width:50%" name="message" value="<?php echo $data->message; ?>">
+    <input type="text" class="form-control" style ="width:50%" name="message" value="<?php echo $data->message; ?>" required>
   </div>
 
  <div class="form-group">
     <label for="isdone">isDone:</label>
-    <input type="number" class="form-control" style ="width:50%" name="isdone" value="<?php echo $data->isdone; ?>">
+    <input type="number" class="form-control" style ="width:50%" name="isdone" value="<?php echo $data->isdone; ?>" required>
   </div>
    
    <div class="row">

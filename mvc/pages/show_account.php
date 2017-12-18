@@ -28,7 +28,7 @@
 
 
 </div>
-
+<h3>Welcome <?php echo $data->fname;?></h3>
 </br>
 <h3  style="text-align: center;">Here are your details</h3>
 
@@ -52,51 +52,7 @@ display: block;
 }
 </style>
 
-<!--<form action="index.php?page=accounts&action=save&id=<?php echo $data->id; ?>" method="post">
 
- <div class="form-group">
-    <label for="fname">First Name:</label>
-    <input type="text" class="form-control" style ="width:50%" name="fname" value="<?php echo $data->fname; ?>">
-  </div>
-  
-   <div class="form-group">
-    <label for="lname">Last Name:</label>
-    <input type="text" class="form-control" style ="width:50%" name="lname" value="<?php echo $data->lname; ?>">
-  </div>
-  
-   <div class="form-group">
-    <label for="email">Email:</label>
-    <input type="email" class="form-control" style ="width:50%" name="email" value="<?php echo $data->email; ?>">
-  </div>
-  
-   <div class="form-group">
-    <label for="phone">Phone :</label>
-    <input type="number" class="form-control" style ="width:50%" name="phone" value="<?php echo $data->phone; ?>">
-  </div>
-
-   <div class="form-group">
-    <label for="Birthday">Birthday:</label>
-    <input type="date" class="form-control" style ="width:50%" name="birthday" value="<?php echo $data->birthday; ?>">
-  </div>
-
-   <div class="form-group">
-    <label for="gender">Gender:</label>
-    <input type="text" class="form-control" style ="width:50%" name="gender" value="<?php echo $data->gender; ?>">
-  </div>
-
-
-<div class="row">
-				<div class="col-xs-6 col-sm-3"> <input type="submit" value="Update Form" class="btn btn-primary btn-block btn-md"> <Span class ="glyphicon glyphicon-edit"></span> </div>
-</form>
-<div class="col-xs-6 col-sm-3"> 
-
-  <form action="index.php?page=accounts&action=delete&id=<?php echo $data->id; ?> " method="post" id="form1">
-    <button type="submit" form="form1" value="delete" class="btn btn-primary btn-block btn-md"
-     style ="background-color:red;">Delete</button>
-</form>
- </div>
-     
-        </div> -->
 
 
 

@@ -71,28 +71,28 @@ display: block;
  
  <div class="form-group">
     <label for="email">Ownermail:</label>
-    <input type="email" class="form-control" style ="width:50%" name="mail">
+    <input type="email" class="form-control" style ="width:50%" name="mail" required>
   </div>
    <div class="form-group">
     <label for="oid">Ownerid:</label>
-    <input type="text" class="form-control" style ="width:50%" name="oid">
+    <input type="text" class="form-control" style ="width:50%" name="oid" required>
   </div>
  <div class="form-group">
     <label for="createdate">CreatedDate:</label>
-    <input type="date" class="form-control" style ="width:50%"name="createdate">
+    <input type="date" class="form-control" style ="width:50%"name="createdate" required>
   </div>
  <div class="form-group">
     <label for="duedate">Due Date:</label>
-    <input type="date" class="form-control" style ="width:50%" name="duedate">
+    <input type="date" class="form-control" style ="width:50%" name="duedate" required>
   </div>
  <div class="form-group">
     <label for="message">Message:</label>
-    <input type="text" class="form-control" style ="width:50%" name="message">
+    <input type="text" class="form-control" style ="width:50%" name="message" required>
   </div>
 
  <div class="form-group">
     <label for="isdone">isDone:</label>
-    <input type="number" class="form-control" style ="width:50%" name="isdone">
+    <input type="number" class="form-control" style ="width:50%" name="isdone" required>
   </div>
    
    <div class="row">
