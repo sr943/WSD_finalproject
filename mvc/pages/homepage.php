@@ -17,10 +17,10 @@
 </head>
 
 
-<body background="bgimage.jpg" style = "background-repeat:no-repeat; background-size:cover;">
+<body background="alltask.jpg" style = "background-repeat:no-repeat; background-size:cover;">
 
  <br>
-<h1><center> <font color="White" ><u>
+<h1><center> <font color="Black" ><u>
     <?php
 
     //this how to print some data;

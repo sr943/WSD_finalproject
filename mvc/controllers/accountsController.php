@@ -103,7 +103,7 @@ class accountsController extends http\controller
         $user->save();
         
       
-        header("Location: index.php?page=tasks&action=userTask");
+        header("Location: index.php?page=accounts&action=myProfile");
 
     }
     

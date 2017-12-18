@@ -16,14 +16,14 @@
     <![endif]-->
 </head>
 
-<body>
+<body background="alltask.jpg" style = "background-repeat:no-repeat; background-size:cover;">
 <div class="row" style="text-align:right;background-color:grey;font-color:white;">
 <div class="col-md-6"></div>
 <div class="col-md-2"style="  padding-top:  8px;"><a href="index.php?page=accounts&action=myProfile" style="color:white;">My Profile</a></div>
 <div class="col-md-2" style=" padding-top:  8px;"><a href="index.php?page=accounts&action=editProfile" style="color:white;">Edit Profile</a></div>
 <div class="col-md-2"><form action="index.php?page=accounts&action=logout" method="post">
     
-    <div class="btn"><input style="border:0px solid transparent;background-color:grey;color:white;cursor:pointer;" type="submit" >Logout</input> </div>
+    <div class="btn"><input style="border:0px solid transparent;background-color:grey;color:white;cursor:pointer;" type="submit" value="Logout"> </div>
     </form></div>
 
 
@@ -32,7 +32,7 @@
 </br>
 <h3  style="text-align: center;">Here are your details</h3>
 
-
+</br>
 <div class="container">
 <div class="row">
 <?php

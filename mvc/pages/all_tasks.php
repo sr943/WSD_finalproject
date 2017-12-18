@@ -18,7 +18,7 @@
 </head>
 
 
-<body background="alltask.jpg">
+<body background="alltask.jpg" style = "background-repeat:no-repeat; background-size:cover;">
 
 
 
@@ -30,14 +30,14 @@
 <div class="col-md-2" style=" padding-top:  8px;"><a href="index.php?page=accounts&action=editProfile" style="color:white;">Edit Profile</a></div>
 <div class="col-md-2"><form action="index.php?page=accounts&action=logout" method="post">
     
-    <div class="btn"><input style="border:0px solid transparent;background-color:grey;color:white;cursor:pointer;" type="submit" >Logout</input> </div>
+    <div class="btn"><input style="border:0px solid transparent;background-color:grey;color:white;cursor:pointer;" type="submit" value="Logout"> </div>
     </form></div>
 
 
 </div>
 
 <br/>
-<h2 style="text-align:center; text-family:arial;"> Your Tasks </h2>
+<h2 style="text-align:center; text-family:arial;"> Add Your Tasks </h2>
 
 
 <div class="container">
