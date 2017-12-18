@@ -8,19 +8,19 @@ class htmlTable
     public static function genarateTableFromMultiArray($array)
     {
 
-        $tableGen = '<table border="1"cellpadding="10">';
-        $tableGen .= '<tr>';
+        $tableGen = '<table border="1"cellpadding="10" class ="table table-striped">';
+        $tableGen .= '<thead><tr>';
         //this grabs the first element of the array so we can extract the field headings for the table
         $fieldHeadings = $array[0];        
         $fieldHeadings = get_object_vars($fieldHeadings); 
         $fieldHeadings = array_keys($fieldHeadings);
         //this gets the page being viewed so that the table routes requests to the correct controller
         $referingPage = $_REQUEST['page'];
-        print($referingPage);
+        //print($referingPage);
         foreach ($fieldHeadings as $heading) {
             $tableGen .= '<th>' . $heading . '</th>';
         }
-        $tableGen .= '</tr>';
+        $tableGen .= '</tr></thead><tbody>';
         foreach ($array as $record) {
             $tableGen .= '<tr>';
             foreach ($record as $key => $value) {
@@ -33,26 +33,26 @@ class htmlTable
             $tableGen .= '</tr>';
         }
 
-        $tableGen .= '</table>';
+        $tableGen .= '</tbody></table>';
 
         return $tableGen;
     }
 
     public static function generateTableFromOneRecord($innerArray)
     {
-        $tableGen = '<table border="1" cellpadding="10"><tr>';
+        $tableGen = '<table border="1" cellpadding="10" class ="table table-striped"><tr>';
 
-        $tableGen .= '<tr>';
+        $tableGen .= '<thead><tr>';
         foreach ($innerArray as $innerRow => $value) {
             $tableGen .= '<th>' . $innerRow . '</th>';
         }
-        $tableGen .= '</tr>';
+        $tableGen .= '</tr></thead><tbody><tr>';
 
         foreach ($innerArray as $value) {
             $tableGen .= '<td>' . $value . '</td>';
         }
 
-        $tableGen .= '</tr></table><hr>';
+        $tableGen .= '</tr></tbody></table><hr>';
         return $tableGen;
     }
 }

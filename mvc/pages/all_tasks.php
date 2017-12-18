@@ -1,7 +1,3 @@
-<?php 
-include 'hf.html';
-
-?>
 
 <!doctype html>
 
@@ -18,23 +14,49 @@ include 'hf.html';
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
     <![endif]-->
+
 </head>
+
+
 <body background="alltask.jpg">
 
-<a href="index.php?page=accounts&action=myProfile">My Profile</a>
-<br/>
-<a href="index.php?page=accounts&action=editProfile">Edit Profile</a>
 
+
+
+
+<div class="row" style="text-align:right;background-color:grey;font-color:white;">
+<div class="col-md-6"></div>
+<div class="col-md-2"style="  padding-top:  8px;"><a href="index.php?page=accounts&action=myProfile" style="color:white;">My Profile</a></div>
+<div class="col-md-2" style=" padding-top:  8px;"><a href="index.php?page=accounts&action=editProfile" style="color:white;">Edit Profile</a></div>
+<div class="col-md-2"><form action="index.php?page=accounts&action=logout" method="post">
+    
+    <div class="btn"><input style="border:0px solid transparent;background-color:grey;color:white;cursor:pointer;" type="submit" >Logout</input> </div>
+    </form></div>
+
+
+</div>
+
+<br/>
+<h2 style="text-align:center; text-family:arial;"> Your Tasks </h2>
+
+
+<div class="container">
+<br/>
+
+<div class="row">
 <?php
 //this is how you print something
-
+ if(!empty($data))
 print utility\htmlTable::genarateTableFromMultiArray($data);
 
 
 ?>
-
+</div>
 
 <style>
+a{
+
+}
 label{
 width: 5em;
 float: right;
@@ -45,19 +67,40 @@ display: block;
 </style>
 <br>
 
-<form action="index.php?page=tasks&action=insertTask" method="post">
+<form role="form" action="index.php?page=tasks&action=insertTask"  style="border: 1px;"method="post">
+ 
+ <div class="form-group">
+    <label for="email">Ownermail:</label>
+    <input type="email" class="form-control" style ="width:50%" name="mail">
+  </div>
+   <div class="form-group">
+    <label for="oid">Ownerid:</label>
+    <input type="text" class="form-control" style ="width:50%" name="oid">
+  </div>
+ <div class="form-group">
+    <label for="createdate">CreatedDate:</label>
+    <input type="date" class="form-control" style ="width:50%"name="createdate">
+  </div>
+ <div class="form-group">
+    <label for="duedate">Due Date:</label>
+    <input type="date" class="form-control" style ="width:50%" name="duedate">
+  </div>
+ <div class="form-group">
+    <label for="message">Message:</label>
+    <input type="text" class="form-control" style ="width:50%" name="message">
+  </div>
 
-    
-    Ownermail: <label> <input type="email" name="mail" ></label><br><br>
-    Ownerid: <label><input type="number" name="oid" ></label><br><br>
-    Createddate: <label> <input type="text" name="createdate" ></label><br><br>
-    Duedate: <label><input type="text" name="duedate" ></label><br><br>
-    Message: <label><input type="text" name="message" ></label><br><br>
-    isDone: <label><input type="number" name="isdone" ></label><br><br>
-    <input type="submit" value="Insert">
+ <div class="form-group">
+    <label for="isdone">isDone:</label>
+    <input type="number" class="form-control" style ="width:50%" name="isdone">
+  </div>
+   
+   <div class="row">
+				<div class="col-xs-3 col-sm-3"> <input type="submit" value="Insert" class="btn btn-primary btn-block btn-md" tabindex="7"> </div>
+        </div>
 </form>
 
-
+</div>
 <script src="js/scripts.js"></script>
 </body>
 </html>

@@ -70,7 +70,7 @@ public static function insertTask() {
         session_start();
       
         $user->userid=$_SESSION['userID'];
-       
+        //print_r($user);
         $user->save();
         header("Location: index.php?page=tasks&action=userTask");
 
@@ -118,9 +118,13 @@ public static function insertTask() {
         $user->duedate = $_POST['duedate'];
         $user->message = $_POST['message'];
         $user->isdone = $_POST['isdone'];
-        $user->userid = $_SESSION['userid'];
+        if (session_status()== PHP_SESSION_NONE) {
+            session_start();
+        }
+        $user->userid = $_SESSION['userID'];
         $user->save();
-        header("Location: index.php?page=tasks&action=all");
+        //print_r($user);
+        header("Location: index.php?page=tasks&action=userTask");
 
 
     }

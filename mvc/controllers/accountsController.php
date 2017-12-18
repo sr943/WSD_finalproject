@@ -98,10 +98,11 @@ class accountsController extends http\controller
         $user->lname = $_POST['lname'];
         $user->phone = $_POST['phone'];
         $user->birthday = $_POST['birthday'];
-        $user->gender = $_POST['gender'];        
+        $user->gender = $_POST['gender']; 
+        //print_r($user);       
         $user->save();
         
-       // header("Location: index.php?page=accounts&action=all");
+      
         header("Location: index.php?page=tasks&action=userTask");
 
     }
@@ -141,10 +142,13 @@ class accountsController extends http\controller
     }
 
     public static function delete() {
-
-        $record = accounts::findOne($_REQUEST['id']);
+        if (session_status()== PHP_SESSION_NONE) {
+            session_start();
+        }
+        $record = accounts::findOne($_SESSION['userID']);
+    
         $record->delete();
-        header("Location: index.php?page=accounts&action=all");
+        header("Location: index.php");
     }
 
     //this is to login, here is where you find the account and allow login or deny.

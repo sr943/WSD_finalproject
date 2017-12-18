@@ -1,8 +1,3 @@
-<?php 
-include 'hf.html';
-
-?>
-
 <!doctype html>
 
 <html lang="en">
@@ -20,8 +15,19 @@ include 'hf.html';
     <![endif]-->
 </head>
 
-<body>
+<body><div class="row" style="text-align:right;background-color:grey;font-color:white;">
+<div class="col-md-6"></div>
+<div class="col-md-2"></div>
+<div class="col-md-2" ></div>
+<div class="col-md-2"><form action="index.php?page=accounts&action=logout" method="post">
+    
+    <div class="btn"><input style="border:0px solid transparent;background-color:grey;color:white;cursor:pointer;" type="submit">Logout</input> </div>
+    </form>
+    </div></div>
 
+<br/>
+
+<div class="container">
 <?php
 //this is how you print something  $data contains the record that was selected on the table.
 print utility\htmlTable::generateTableFromOneRecord($data);
@@ -41,25 +47,55 @@ display: block;
 
 <form action="index.php?page=tasks&action=save&id=<?php echo $data->id; ?>" method="post">
 
-    
-    Ownermail: <label> <input type="email" name="mail" value="<?php echo $data->owneremail; ?>"></label><br><br>
-    Ownerid: <label><input type="number" name="oid" value="<?php echo $data->ownerid; ?>"></label><br><br>
-    Createddate: <label> <input type="text" name="createdate"  value="<?php echo $data->createddate; ?>"></label><br><br>
-    Duedate: <label><input type="text" name="duedate" value="<?php echo $data->duedate; ?>"></label><br><br>
-    Message: <label><input type="text" name="message" value="<?php echo $data->message; ?>"></label><br><br>
-    isDone: <label><input type="number" name="isdone" value="<?php echo $data->isdone; ?>"></label><br><br>
-    <input type="submit" value="Update Form">
+   <div class="form-group">
+    <label for="email">Ownermail:</label>
+    <input type="email" class="form-control" style ="width:50%" name="mail" value="<?php echo $data->owneremail; ?>">
+  </div>
+   <div class="form-group">
+    <label for="oid">Ownerid:</label>
+    <input type="text" class="form-control" style ="width:50%" name="oid" value="<?php echo $data->ownerid; ?>">
+  </div>
+ <div class="form-group">
+    <label for="createdate">CreatedDate:</label>
+    <input type="date" class="form-control" style ="width:50%"name="createdate" value="<?php echo $data->createddate; ?>">
+  </div>
+ <div class="form-group">
+    <label for="duedate">Due Date:</label>
+    <input type="date" class="form-control" style ="width:50%" name="duedate" value="<?php echo $data->duedate; ?>">
+  </div>
+ <div class="form-group">
+    <label for="message">Message:</label>
+    <input type="text" class="form-control" style ="width:50%" name="message" value="<?php echo $data->message; ?>">
+  </div>
+
+ <div class="form-group">
+    <label for="isdone">isDone:</label>
+    <input type="number" class="form-control" style ="width:50%" name="isdone" value="<?php echo $data->isdone; ?>">
+  </div>
+   
+   <div class="row">
+				<div class="col-xs-6 col-sm-3"> <input type="submit" value="Update Form" class="btn btn-primary btn-block btn-md"> <Span class ="glyphicon glyphicon-edit"></span> </div>
+        </form>
+<div class="col-xs-6 col-sm-3"> 
+
+  <form action="index.php?page=tasks&action=delete&id=<?php echo $data->id; ?> " method="post" id="form1">
+    <input type="submit" form="form1" value="delete" class="btn btn-primary btn-block btn-md"
+     style ="background-color:red;">Delete</input>
 </form>
+ </div>
+     
+        </div> 
+
+    
+    
 
 
 
-<form action="index.php?page=tasks&action=delete&id=<?php echo $data->id; ?> " method="post" id="form1">
-    <button type="submit" form="form1" value="delete">Delete</button>
-</form> 
 
 
 
 
+</div>
 <script src="js/scripts.js"></script>
 </body>
 </html>

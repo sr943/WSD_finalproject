@@ -22,6 +22,7 @@ $routes[] = self::create('GET','show','accounts','accountsController','show');
 $routes[] = self::create('POST','login','accounts','accountsController','login');
 $routes[] = self::create('POST','delete','tasks','tasksController','delete');
 $routes[] = self::create('POST','delete','accounts','accountsController','delete');
+$routes[] = self::create('GET','delete','accounts','accountsController','delete');
 $routes[] = self::create('GET','edit','accounts','accountsController','edit');
 $routes[] = self::create('POST','save','accounts','accountsController','save');
 $routes[] = self::create('POST','save','tasks','tasksController','save');
